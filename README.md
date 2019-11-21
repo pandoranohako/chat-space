@@ -8,8 +8,8 @@
 |email|string|null: false, unique: true
 |password|string|null: false
 ### Association
-- has_many_massage
-- has_many_groups
+- has_many :messages
+- has_many :group_users
 - has_many:groups,through: :group_users
 
 ## groupsテーブル
@@ -17,10 +17,10 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many_massages
+- has_many :messages
 - has_many :users, through: :group_users
 
-## massagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|	
