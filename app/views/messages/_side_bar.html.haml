@@ -1,13 +1,13 @@
 .chat-side
   .side-header
     %h3.side-header__name
-      pandora
+      = current_user.name
       %ul.side-header__name__lists
         %li.list
-          = link_to "https://www.facebook.com/",class: "header__list" do
+          = link_to  edit_user_path(current_user) do
             %link_toi.fa.fa-pen
-          %li.list
-          = link_to "https://twitter.com/",class:"header__list" do
+            %li.list
+          = link_to edit_user_path(current_user) do
             %link_toi.fa.fa-cog
 
   .groups
