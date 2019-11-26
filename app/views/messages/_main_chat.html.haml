@@ -1,0 +1,29 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      member
+      %h2.main-header__left-box-current-group
+      %ul.main-header__left-box-member-list
+        member: 
+        %li.main-header__left-box-member-list__member
+        hihihi
+    .main-header__edit-btm
+      edit
+
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+          kai
+        %p.message__upper-info__date
+          date
+      %p.message__text
+        text
+
+  .form
+    %form
+      %input.form__message{placeholder: "type a message"}
+      %label.input-box__image
+        = icon("fas",  "image")
+        %input.hidden{type: "file"}
+      %input.form__submit{type: "submit" ,value:  "send"}
