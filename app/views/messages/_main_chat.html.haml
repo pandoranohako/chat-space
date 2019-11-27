@@ -11,19 +11,14 @@
       edit
 
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          kai
-        %p.message__upper-info__date
-          date
-      %p.message__text
-        text
+    = render @messages
 
   .form
-    %form
-      %input.form__message{placeholder: "type a message"}
-      %label.input-box__image
-        = icon("fas",  "image")
-        %input.hidden{type: "file"}
-      %input.form__submit{type: "submit" ,value:  "send"}
+    .form
+      = form_for [@group, @message] do |f|
+        =f.text_field :content, class: 'form__message',placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
