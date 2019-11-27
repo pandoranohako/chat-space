@@ -69,20 +69,33 @@ overflow: scroll;
 
 .form {
   height: 90px;
-  padding: 20px 40px;
+  padding: 1px 40px ;
   background-color: #ddd;
   box-sizing: border-box;
   &__message {
     border: none;
     float: left;
-    height: 50px;
+    height: 60px;
     width: calc(100% - 150px);
     padding: 0 40px 0 5px;
     position: relative;
     }
+  &__mask {
+    background-color: white;
+    float: left;
+    padding-right: 20px;
+    &__image {
+      font-size: 20px;
+      line-height: 60px;
+      position: absolute;
+      background-color: white;
+      right: 200px;
+      cursor: pointer;
+    }
+  }
     &__submit {
       width: 100px;
-      height: 50px;
+      height: 60px;
       margin-bottom: 100px;
       background-color: #38aef0;
       color: white;
@@ -92,15 +105,7 @@ overflow: scroll;
 
 
 
-.input-box__image {
-  font-size: 20px;
-  line-height: 50px;
-  position: absolute;
-  background-color: white;
-  right: 200px;
-  cursor: pointer;
 
-}
 
 .hidden {
   display: none;
