@@ -51,9 +51,7 @@ $('.new_message').on('submit', function(e){
     })
 })
 var reloadMessages = function() {
-  // if(window.location.href.match(/\/groups\/\d+\/messages/)){  // 今いるページのリンクが /groups/group_id/messagesのパスとマッチ（一致）していれば以下を実行する
-    last_message_id = $('.message:last').data('message-id') || 0; 
-    console.log(last_message_id);
+    last_message_id = $('.message:last').data('message-id') ; 
     $.ajax({
       url: 'api/messages',
       type: 'get',
@@ -73,7 +71,7 @@ var reloadMessages = function() {
 
     });
 };
-setInterval(reloadMessages, 5000);
+setInterval(reloadMessages, 7000);
 });
 
 
