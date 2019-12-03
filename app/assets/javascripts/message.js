@@ -10,7 +10,7 @@ $(function(){
       <div class="message__upper-info__talker"> 
         ${message.user_name}
       </div>
-    <div class="message__upper-info__date">
+      <div class="message__upper-info__date">
       ${message.created_at}
       </div>
         </div>
